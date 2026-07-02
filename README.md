@@ -113,7 +113,7 @@ CLOUDINARY_API_SECRET=
 ```bash
 npm run dev
 ```
-App runs at `http://localhost:3000`.
+App runs at `https://rootrisestore.netlify.app/`.
 
 ### 4. Build for production
 ```bash
