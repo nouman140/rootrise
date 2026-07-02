@@ -1,0 +1,37 @@
+# Firebase App Hosting config
+# Docs: https://firebase.google.com/docs/app-hosting/configure
+
+runConfig:
+  minInstances: 0
+  maxInstances: 5
+  concurrency: 80
+  cpu: 1
+  memoryMiB: 512
+
+# These reference secrets stored in Cloud Secret Manager, NOT raw values.
+# You create each secret with:
+#   firebase apphosting:secrets:set <secretName>
+# then it becomes available to your app as process.env.<variable> at runtime.
+env:
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    secret: NEXT_PUBLIC_FIREBASE_API_KEY
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    secret: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    secret: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    secret: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    secret: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    secret: NEXT_PUBLIC_FIREBASE_APP_ID
+  - variable: NEXT_PUBLIC_ADMIN_EMAIL
+    secret: NEXT_PUBLIC_ADMIN_EMAIL
+  - variable: NEXT_PUBLIC_ADMIN_PASSWORD
+    secret: NEXT_PUBLIC_ADMIN_PASSWORD
+  - variable: NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+    secret: NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+  - variable: CLOUDINARY_API_KEY
+    secret: CLOUDINARY_API_KEY
+  - variable: CLOUDINARY_API_SECRET
+    secret: CLOUDINARY_API_SECRET
